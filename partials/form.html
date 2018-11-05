@@ -1,0 +1,15 @@
+<form>
+    <label for="name">Nom :</label>
+    <input type="text" ng-model="name" name="name">
+    <label for="email">E-mail :</label>
+    <input type="email" ng-model="email" name="email">
+    <label for="sujet">Sujet :</label>
+    <input type="text" ng-model="subject" name="sujet">
+    <textarea ng-model="text"></textarea>
+    <button type="button" ng-click="sendData()">envoyer</button>
+</form>
+<ul>
+    <!-- on boucle dans le tableau "subjectList" grâce à la directive "ng-repeat"
+    "$index" nous sert a récuperer la première ligne d'un tableau -->
+    <li ng-repeat="subject in subjectList"><a href="#!/view/{{$index}}">{{subject}}</a></li>
+</ul>
